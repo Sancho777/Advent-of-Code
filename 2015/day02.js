@@ -3,6 +3,9 @@ const fileName = "day02input.txt";
 const fileData = fs.readFileSync(fileName, "utf8");
 const data = fileData.split('\r')
 
+console.log(fileData)
+
+
 function paper_wrap(measures){
     
     let total = 0
