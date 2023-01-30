@@ -7,9 +7,9 @@ const data = fileData.split('')
 
 function giftHouses(data){
 
-    const m = 1000;
-    const  n = 1000;
-    let arr = Array(m).fill(null).map(() => Array(n).fill(0));
+    const m = 500;
+    const  n = 500;
+    let arr = Array(m).fill(null).map(() => Array(n).fill(' '));
 
     let x = 500
     let y = 500
@@ -38,8 +38,8 @@ function giftHouses(data){
 
 function giftHouses2(data){
 
-    const m = 1000;
-    const  n = 1000;
+    const m = 200;
+    const  n = 200;
     let arr = Array(m).fill(null).map(() => Array(n).fill(0));
 
     // console.log(arr.length)
@@ -57,8 +57,8 @@ function giftHouses2(data){
       console.log(even)
       console.log(odd)
 
-    let x = 500
-    let y = 500
+    let x = 100
+    let y = 100
     arr[x][y] = 1
     let total = 1
 
@@ -78,8 +78,8 @@ function giftHouses2(data){
         arr[x][y] = 1
     }
 
-    x = 500
-    y = 500
+    x = 100
+    y = 100
 
     for(let i = 0; i<even.length; i++){
         if(even[i] == '^'){
@@ -96,6 +96,17 @@ function giftHouses2(data){
         }
         arr[x][y] = 1
     }
+
+    const arr2 = JSON.stringify(arr)
+    // console.log(arr2)
+    // require("fs").writeFile("demo.txt", arr2);
+    fs.writeFile("./test.txt", arr2, (err) => {
+        if (err) {
+        console.error(err);}
+        return;
+          })
+    
+    // saveAs(new File(arr2, "demo.txt", {type: "text/plain;charset=utf-8"}))
 
     // console.log(total)
     return {total, arr}
