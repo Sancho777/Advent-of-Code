@@ -101,4 +101,5 @@ function niceTextPartTwo(lines) {
         });
     });
 }
-niceTextPartTwo(data);
+niceTextPartOne(data);
+niceTextPartTwo(data); //51

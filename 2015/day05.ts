@@ -115,5 +115,5 @@ function niceTextPartTwo(lines: string[]){
             }) 
     })
 }
-
-niceTextPartTwo(data)
+niceTextPartOne(data)
+niceTextPartTwo(data)  //51
